@@ -6,8 +6,8 @@ Co-creator:
 * Kevin Krupa
 * Andrew Hass
 
-To run execute: venv/bin/python app.py
-In terminal should look like: computerusername$ venv/bin/python app.py
+To run execute: # venv/bin/python app.py \n
+In terminal should look like: # computerusername$ venv/bin/python app.py
 
 
 
