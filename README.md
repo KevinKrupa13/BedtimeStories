@@ -1,5 +1,6 @@
 # bStories
-Bedtime story generator
+Bedtime story generator. We generate stories based on the prompt that you enter. Have you or your children create the story, and then you can read it to them. Welcome to a world with infinite stories. 🌙✨📕
+Founded 2021
 
 Co-creator:
 * Henry Macht (@hmacht)
@@ -12,7 +13,7 @@ pip install openai twilio flask python-dotenv
 ```
 ### Execute: <br /> 
 ```
-venv/bin/python &nbsp; app.py
+venv/bin/python app.py
 ```
 
 
