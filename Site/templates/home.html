@@ -18,21 +18,18 @@
   </head>
 
   <body class="text-center">
-    <form class="form-signin">
-      <h1 class="h3 mb-3 font-weight-normal">Betime Story Generator</h1>
-      <label for="inputEmail" class="sr-only">Story prompt</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Story prompt" required autofocus>
-      
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Generate</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
-    </form>
-
-
-    <form action="/my-link/">
-        <input type="submit" value="Click me" />
-    </form>
     
-    <button> <a href="/my-link/">Click me</a></button>
+
+    <h1 class="h3 mb-3 font-weight-normal">Betime Story Generator</h1>
+
+
+    <form method="POST">
+        <input name="text">
+        <form action="/my-link/">
+            <input type="submit" value="Generate" />
+        </form>
+    </form>
+
   </body>
   
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

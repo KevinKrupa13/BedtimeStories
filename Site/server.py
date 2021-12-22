@@ -1,15 +1,16 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template
+from app import ghostWritter
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-  return render_template('index.html')
+  return render_template('home.html')
 
-@app.route('/my-link/')
+@app.route('/', methods=['POST'])
 def my_link():
   print ('I got clicked!')
-
-  return 'Click.'
+  userPrompt = request.form['text']
+  return ghostWritter(userPrompt)
 
 if __name__ == '__main__':
   app.run(debug=True)
