@@ -5,7 +5,7 @@ Founded 2021
 Co-creator:
 * Henry Macht (@hmacht)
 * Kevin Krupa (@kevinkrupa13)
-* Andrew Hass
+* Andrew Hass (@andrewhass1)
 
 ### Make sure you have all the proper packages: <br /> 
 ```
