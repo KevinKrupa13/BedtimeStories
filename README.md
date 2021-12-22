@@ -9,7 +9,7 @@ Co-creator:
 
 ### Make sure you have all the proper packages: <br /> 
 ```
-pip install openai twilio flask python-dotenv
+pip install openai flask python-dotenv
 ```
 ### Execute: <br /> 
 ```
