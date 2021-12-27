@@ -8,7 +8,7 @@ def ghostWritter(userStory):
     #session_story = "The following is a spooky story written for kids, just in time for Halloween. Everyone always talks about the old house at the end of the street, but I couldn't believe what happened when I went inside."
     session_story = "The following is a story written for kid about " + userStory 
     story = ""
-    for i in range(0, 1):
+    for i in range(0, 3):
         story = write_story(session_story)
         session_story = append_to_story(story, session_story)
     print(session_story)

@@ -13,27 +13,152 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
 
 
-    <!-- Custom styles for this template -->
-    <link href="home.css" rel="stylesheet">
+
+    <style>
+
+      @font-face{
+        font-family: nighty;
+        src: url("{{ url_for('static', filename='Nightydemo-nRjOP.otf')}}");
+      }
+
+      .main-background {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+      }
+
+      .second-background {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -2;
+        background-color: #800303;
+        height: 100%;
+        width: 100%;
+      }
+
+      .main-header {
+        color: white;
+        font-family: nighty;
+        font-size: 60px;
+      }
+
+      .sub-header {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        max-width: 500px;
+        
+        
+      }
+      
+      
+      body {
+        height: 100%;
+      }
+
+      
+
+      body {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        -ms-flex-align: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background: black; /* Initial background */
+        transition: 5.00s; /* .5s how long transitions shoould take */
+      }
+
+      .form-signin {
+        width: 100%;
+        max-width: 750px;
+        padding: 15px;
+        padding-top: 18%;
+        margin: 0 auto;
+      }
+      
+      
+      .form-signin .form-control:focus {
+        z-index: 2;
+      }
+    
+      .center-block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus,
+      button:focus {
+          outline: none;
+      }
+      .prompt-input {
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 20px; 
+        width: 300px;
+        height: 20px;    
+        border: none;
+        color: white;
+      }
+      .generate-btn {
+        text-align:right;
+        border-radius: 8px;
+        background: rgb(57, 126, 245);
+        padding: 10px;    
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 15px;
+      }
+    </style>
   </head>
 
   <body class="text-center">
+
+    <img src="{{url_for('static', filename='backgroundImg.png')}}" class="bg-image main-background" alt="Responsive image">
+
+
+
+    <form class="form-signin" method="POST">
+      <h1 class="h3 mb-0 font-weight-normal main-header">A place with infinite stories</h1>
+      <h3 class="mb-4 sub-header center-block">We generate bedtime stories based on the prompt that you or your child enter. You never have to buy a book again!</h3>
+
+
+      <input name="text" class="prompt-input" placeholder="Type story prompt here">
+      <form action="/my-link/" class="generate-btn-form">
+          <input type="submit" value="Generate" class="generate-btn"/>
+      </form>
+
+    </form>
     
 
-    <h1 class="h3 mb-3 font-weight-normal">Betime Story Generator</h1>
-
-
-    <form method="POST">
-        <input name="text">
-        <form action="/my-link/">
-            <input type="submit" value="Generate" />
-        </form>
-    </form>
+    
 
   </body>
   
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script>
+    var colors = ['#4E2727', '#3F274E', 'black', '#4C1683', '#2A274E']; // Define Your colors here, can be html name of color, hex, rgb or anything what You can use in CSS
+    var active = 0;
+    setInterval(function(){
+        document.querySelector('body').style.background = colors[active];
+        active++;
+        if (active == colors.length) active = 0;
+    }, 3000);
+  </script>
 </html>
 
